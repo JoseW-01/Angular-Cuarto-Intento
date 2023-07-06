@@ -11,7 +11,7 @@ export class AppComponent {
   employeeArray: Employee[];
   selectedEmployee: Employee = new Employee();
   addOrEdit() {
-    if (this.selectedEmployee.id === 0) {
+    if (!this.selectedEmployee.id) {
       this.selectedEmployee.id = this.employeeArray.length + 1;
       this.employeeArray.push(this.selectedEmployee);
 
